@@ -1,0 +1,38 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+
+  //font-size: 62.5%;, 16px'in %62.5'ine, yani 10px'e eşittir:
+  font-size: 62.5%;
+
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+  @include respond(phone) {
+    font-size: 45%;
+  }
+  @media (max-width: 23.4375em) {
+    font-size: 40%;
+  }
+
+  @include respond(big-desktop) {
+    font-size: 65%;
+  }
+}
+body {
+  box-sizing: border-box;
+  line-height: 2.5rem;
+}
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}
